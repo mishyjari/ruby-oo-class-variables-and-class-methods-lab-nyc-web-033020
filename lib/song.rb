@@ -4,8 +4,8 @@ class Song
   
   @@count = 0
   
-  @@artists = []
   @@genres = []
+  @@artists = []
   
   @@genre_count = {}
   @@artist_count = {}
@@ -28,6 +28,8 @@ class Song
     
     @@genre_count[genre] = 0 if !@@genre_count[genre]
     @@genre_count[genre] += 1
+    
+
   end
   
   # getters
@@ -40,6 +42,7 @@ class Song
   def self.genres
     @@genres.uniq
   end
+  
   def self.artist_count
     @@artist_count
   end
